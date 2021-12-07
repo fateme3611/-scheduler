@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import "./styles.scss";
-// import Header from "./Header.js";
+import Header from "./Header.js";
 
 
 export default function Appointment(props) {
@@ -17,6 +17,7 @@ export default function Appointment(props) {
     return (
         <Fragment>
             <article className="appointment">
+                <Header Time = {props.time}/>
 
             </article>
         </Fragment>
