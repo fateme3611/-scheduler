@@ -1,24 +1,26 @@
 import React, { Fragment } from 'react';
 import "./styles.scss";
 import Header from "./Header.js";
+import Empty from "./Empty";
+import Show from "./Show";
+import Confirm from "./Confirm";
+import Status from './Status';
+import Error from './Error';
+
+
 
 
 export default function Appointment(props) {
-   // const EMPTY = "EMPTY";
-    // const SHOW = "SHOW";
-    // const CREATE = "CREATE";
-    // const SAVING = "SAVING";
-    // const EDIT = "EDIT";
-    // const DELETING = "DELETING";
-    // const CONFIRM = "CONFIRM";
-    // const ERROR_SAVE = "ERROR_SAVE";
-    // const ERROR_DELETE = "ERROR_DELETE";
-
+ 
+    const {interview, time, id} = props;
+    const {student, interviewer} = interview|| {};
+    
+    const content = props.interview ? <Show student={student} interviewer={interviewer} onEdit={()=>{}}></Show> : <Empty onAdd={()=>{}}/>;
     return (
         <Fragment>
             <article className="appointment">
-                <Header Time = {props.time}/>
-
+                <Header time = {time}/>
+               {content}
             </article>
         </Fragment>
     )
