@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const GET_DAYS_ENDPOINT = 'http://localhost:8001/api/days';
-const GET_APPOINTMENT_ENDPOINT = 'http://localhost:8001/api/appointments';
-const GET_INTERVIEWS_ENDPOINT = 'http://localhost:8001/api/interviewers';
+const GET_DAYS_ENDPOINT = '/api/days';
+const GET_APPOINTMENT_ENDPOINT = '/api/appointments';
+const GET_INTERVIEWS_ENDPOINT = '/api/interviewers';
 
 
 export default function useApplicationData(props) {
@@ -15,7 +15,11 @@ export default function useApplicationData(props) {
   });
 
   useEffect(() => {
-    Promise.all([axios.get(GET_DAYS_ENDPOINT), axios.get(GET_APPOINTMENT_ENDPOINT), axios.get(GET_INTERVIEWS_ENDPOINT)])
+    Promise.all([
+      axios.get(GET_DAYS_ENDPOINT),
+      axios.get(GET_APPOINTMENT_ENDPOINT),
+      axios.get(GET_INTERVIEWS_ENDPOINT)
+    ])
       .then(res => {
         const days = res[0].data;
         const appointments = res[1].data;

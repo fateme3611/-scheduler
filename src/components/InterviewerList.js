@@ -1,9 +1,11 @@
 import React from "react";
 import "components/InterviewerList.scss";
 import InterviewerListItem from "./InterviewerListItem";
+import PropTypes from 'prop-types';
 
-export default function InterviewerList(props) {
-    const { interviewers, interviewer, onChange } = props;
+
+function InterviewerList({ interviewers, interviewer, onChange }) {
+
     const interviewersArray = [];
     (interviewers || []).map(currentInterviewer => {
         return interviewersArray.push(
@@ -25,3 +27,10 @@ export default function InterviewerList(props) {
     );
 
 }
+
+InterviewerList.propTypes = {
+    interviewers: PropTypes.array,
+    interviewer: PropTypes.number,
+};
+
+export default InterviewerList;

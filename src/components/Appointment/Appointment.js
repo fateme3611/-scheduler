@@ -51,12 +51,6 @@ export default function Appointment(props) {
         back();
     }
 
-    function errorClose() {
-        back();
-    }
-    function confirmCancel() {
-        back();
-    }
     function deleteInterview() {
         transition(CONFIRM);
     }
@@ -114,10 +108,10 @@ export default function Appointment(props) {
 
                 {mode === SAVING && (<Status message="Saving" />)}
                 {mode === DELETING && <Status message="Deleting" />}
-                {mode === CONFIRM && <Confirm onCancel={confirmCancel} onConfirm={deleteInterviewConfirmed} message="Deleting" />}
+                {mode === CONFIRM && <Confirm onCancel={cancel} onConfirm={deleteInterviewConfirmed} message="Deleting" />}
 
-                {mode === ERROR_DELETE && (<Error onClose={errorClose} message="Coul not cancel appointment" />)}
-                {mode === ERROR_SAVE && (<Error onClose={errorClose} message="Coul not save appointment" />)}
+                {mode === ERROR_DELETE && (<Error onClose={cancel} message="Coul not cancel appointment" />)}
+                {mode === ERROR_SAVE && (<Error onClose={cancel} message="Coul not save appointment" />)}
             </article>
         </Fragment>
     )
