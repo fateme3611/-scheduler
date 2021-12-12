@@ -81,8 +81,17 @@ const axios = {
         }
     }),
     post() { },
-    put() { },
-    delete() { }
+    put(url, pl) {
+
+        return Promise.resolve({
+            status: 204,
+        });
+    },
+    delete(url) {
+        return Promise.resolve({
+            status: 204,
+        });
+    }
 }
 
 export default axios; 
