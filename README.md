@@ -3,7 +3,9 @@
 ## Setup
 
 Install dependencies with `npm install`.
-
+you also need to install `npm install pg`
+`npm install --save-dev prop-types`
+and `npm install cypress` for  end to end testing 
 ## Running Webpack Development Server
 
 ```sh
@@ -21,3 +23,7 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Screenshots of application
+
+!["Screenshot of main page of interviwe scheduler"] (docs/Interview Scheduler1.png)
