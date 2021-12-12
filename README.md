@@ -25,5 +25,4 @@ npm run storybook
 ```
 
 ## Screenshots of application
-
-!["Screenshot of main page of interviwe scheduler"] (docs/Interview Scheduler1.png)
+![Screenshot of main page of interviwe scheduler](docs/Interview%20Scheduler1.png)
