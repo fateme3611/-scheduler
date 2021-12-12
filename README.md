@@ -26,3 +26,9 @@ npm run storybook
 
 ## Screenshots of application
 ![Screenshot of main page of interviwe scheduler](docs/Interview%20Scheduler1.png)
+
+![Screenshot of Adding Interviwr appointment](docs/Adding%20Interviwe%20appointment.png)
+
+![Editing Appointment](docs/Editing%20appointment.png)
+
+![Deleting Appointment](docs/Deleting%20appointment.png)
