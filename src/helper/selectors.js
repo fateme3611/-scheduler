@@ -24,6 +24,15 @@ export function getInterview(state, interviwe) {
 }
 
 export function getInterviewersForDay(state) {
+    debugger;
+    const currentDay = state.days.find(it => it.name === state.day);
 
-    return Object.values(state.interviewers);
+    var res = (currentDay.interviewers || []).reduce((acc, item) => {
+        var interviewer = state.interviewers[item];
+        if (interviewer) {
+            acc.push(interviewer);
+        }
+        return acc;
+    }, [])
+    return res;
 }
