@@ -198,6 +198,7 @@ storiesOf("Appointment", module)
         id={1}
         time="4pm"
         interview={{ student: "Lydia Miller-Jones", interviewer }}
+        interviewers={interviewers}
       />
       <Appointment time="5pm" />
     </Fragment>
